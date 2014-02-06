@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regexS = "[\\?&#]" + name + "=([^&#]*)",
+                    regex = new RegExp(regexS),
+                    results = regex.exec(window.location.href);
+            if (results === null) {
+                return "";
+            }
+
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        window.onload = function () {
+            document.getElementById("ad").href = "https://www.penger.no/bilforsikring/?WT.mc_id=" + getParameterByName("tag");
+        };
+    </script>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		.ad {
+			background: #ebf1ef;
+			color: #08452c;
+			display: block;
+			font: 12px Helvetica, Arial, sans-serif;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+			width: 390px;
+			height: 100px;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.inner {
+			display: block;
+			padding: 10px 10px 10px 130px;
+		}
+
+		.title {
+			display: block;
+			font-size: 1.5em;
+			font-weight: 400;
+			margin: 7px 0 10px;
+			text-shadow: 0 1px 1px rgba(255,255,255,.6);
+		}
+
+		.button {
+			background: #66407e;
+			border-radius: 4px;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			font-size: 1.2em;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+			display: block;
+			padding: .5em 2em;
+			margin: 0 auto;
+			text-shadow: 0 1px 1px rgba(0,0,0,1);
+		}
+
+		.button:hover {
+			background: #744d8d;
+		}
+
+		.logo {
+			position: absolute;
+				top: 12px;
+				left: 12px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<a class="ad" href="https://www.penger.no/bilforsikring/?WT.mc_id=ukjent" target="_blank">
+		<span class="inner">
+			<img class="logo" src="gfx/logo.png">
+			<span class="title">Bytt bilforsikring når du vil!</span>
+			<span class="button">Spar tusenlapper her</span>
+		</span>
+	</a>
+
+</body>
+</html>
